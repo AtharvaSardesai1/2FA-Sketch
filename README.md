@@ -6,7 +6,7 @@ Detecting heavy hitters, which are flows exceeding a specified threshold, is cru
 ## About this repo
 - `data`: traces for test, each 13 bytes in a trace is a five tuple: (SrcIP:SrcPort, DstIP:DstPort, protocol)
 
-- `src`: contains codes of 2FASketch and other algorithms implemented on CPU, all of which can be used to detect heavy hitters. They are  SpaceSaving, Count/CM sketch with a min-heap (CountHeap/CMHeap), Elastic, 1FA and 2FASketch respectively. The codes of measuring their accuracy are also added in these algorithms'  .cpp file.
+- `src`: contains codes of 2FASketch and other algorithms implemented on CPU, all of which can be used to detect heavy hitters. They are  ChainSketch, SpaceSaving, Count/CM sketch with a min-heap (CountHeap/CMHeap), Elastic, 1FA and 2FASketch respectively. The codes of measuring their accuracy are also added in these algorithms'  .cpp file.
 
 - `src_for_speed`: algorithms in this folder are the same as those in `src`. The codes in this folder aim at measuring their speed.   
 
@@ -18,7 +18,7 @@ Detecting heavy hitters, which are flows exceeding a specified threshold, is cru
 
 ## How to make
 - `cd ./src/demo; make;` then you can find executable file and test the metrics of accuracy of the above algorithms in `demo`.
-- Executable file: `./elastic.out; ./1FA.out; ./2FASketch.out; ./cmheap.out; ./countheap.out; ./spacesaving.out ` are all followed by  three parameters: the name of output file, algorithms' label name and tested metrics' model name. We use 1~7 to represent the task of measuring ARE, AAE, PR, RR, F1 score, AE's CDF and RE's CDF, respectively.  
+- Executable file: `./elastic.out; ./1FA.out; ./2FASketch.out; ./chainsketch.out; ./cmheap.out; ./countheap.out; ./spacesaving.out ` are all followed by  three parameters: the name of output file, algorithms' label name and tested metrics' model name. We use 1~7 to represent the task of measuring ARE, AAE, PR, RR, F1 score, AE's CDF and RE's CDF, respectively.  
 - `cd ./src_for_speed/demo; make;` then you can find executable file and test he metrics of speed of  the above algorithms in `demo`. Executable files' names are the same as those in folder `./src/demo`, but only followed by two parameters: the name of output file, algorithms' label name.
 
 
