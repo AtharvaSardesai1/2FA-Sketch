@@ -1,0 +1,109 @@
+atharva@atharva-Aspire-A715-42G:~/atharva/BTechProject/2FA-Sketch/src/demo$ ./2FASketch.out 
+processing caida dataset...
+Successfully read in ../../data/0.dat, 2472727 packets
+processing caida dataset...
+Successfully read in ../../data/1.dat, 2489780 packets
+processing caida dataset...
+Successfully read in ../../data/2.dat, 2517685 packets
+processing caida dataset...
+Successfully read in ../../data/3.dat, 2530158 packets
+processing caida dataset...
+Successfully read in ../../data/4.dat, 2518856 packets
+processing caida dataset...
+Successfully read in ../../data/5.dat, 2530680 packets
+processing caida dataset...
+Successfully read in ../../data/6.dat, 2517752 packets
+processing caida dataset...
+Successfully read in ../../data/7.dat, 2515396 packets
+processing caida dataset...
+Successfully read in ../../data/8.dat, 2501781 packets
+processing caida dataset...
+Successfully read in ../../data/9.dat, 2493844 packets
+
+Measurement by Algorithm 2FASketch Starts, memory: 16KB
+There are 109642 flows
+2FA Sketch cnt ratio: 0.704067, 1151853
+heavy hitters: <srcIP, count>, threshold=247, number=1604
+precision_rate=0.918919
+recall_rate=0.763092
+F_score=0.833787
+ARE=1.511830
+AAE=42.356607
+There are 109534 flows
+2FA Sketch cnt ratio: 0.703328, 1147369
+heavy hitters: <srcIP, count>, threshold=248, number=1603
+precision_rate=0.931579
+recall_rate=0.772926
+F_score=0.844869
+ARE=0.805783
+AAE=40.975188
+There are 108264 flows
+2FA Sketch cnt ratio: 0.734633, 1154940
+heavy hitters: <srcIP, count>, threshold=251, number=1582
+precision_rate=0.917282
+recall_rate=0.785082
+F_score=0.846049
+ARE=1.706019
+AAE=47.517725
+There are 108084 flows
+2FA Sketch cnt ratio: 0.745217, 1144531
+heavy hitters: <srcIP, count>, threshold=253, number=1559
+precision_rate=0.924642
+recall_rate=0.787043
+F_score=0.850312
+ARE=1.055735
+AAE=42.657875
+There are 107637 flows
+2FA Sketch cnt ratio: 0.717288, 1153677
+heavy hitters: <srcIP, count>, threshold=251, number=1605
+precision_rate=0.925981
+recall_rate=0.779439
+F_score=0.846414
+ARE=0.926838
+AAE=41.138416
+There are 107435 flows
+2FA Sketch cnt ratio: 0.731883, 1147644
+heavy hitters: <srcIP, count>, threshold=253, number=1572
+precision_rate=0.913269
+recall_rate=0.783715
+F_score=0.843547
+ARE=2.558707
+AAE=44.788732
+There are 107744 flows
+2FA Sketch cnt ratio: 0.743168, 1146105
+heavy hitters: <srcIP, count>, threshold=251, number=1599
+precision_rate=0.924653
+recall_rate=0.790494
+F_score=0.852326
+ARE=1.770959
+AAE=43.104609
+There are 107199 flows
+2FA Sketch cnt ratio: 0.730473, 1157522
+heavy hitters: <srcIP, count>, threshold=251, number=1595
+precision_rate=0.916110
+recall_rate=0.773668
+F_score=0.838885
+ARE=0.850427
+AAE=44.232368
+There are 107382 flows
+2FA Sketch cnt ratio: 0.722828, 1158457
+heavy hitters: <srcIP, count>, threshold=250, number=1654
+precision_rate=0.914847
+recall_rate=0.759976
+F_score=0.830251
+ARE=1.011507
+AAE=47.080786
+There are 107244 flows
+2FA Sketch cnt ratio: 0.724995, 1148829
+heavy hitters: <srcIP, count>, threshold=249, number=1594
+precision_rate=0.924627
+recall_rate=0.777290
+F_score=0.844581
+ARE=1.337543
+AAE=42.581343
+five average results below can be ignored if calculating CDF
+average precision rate=0.921191
+average recallrate=0.777272
+average F1 score=0.843102
+average ARE=1.353535
+average AAE=43.643365

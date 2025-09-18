@@ -1,0 +1,108 @@
+processing caida dataset...
+Successfully read in ../../data/0.dat, 2472727 packets
+processing caida dataset...
+Successfully read in ../../data/1.dat, 2489780 packets
+processing caida dataset...
+Successfully read in ../../data/2.dat, 2517685 packets
+processing caida dataset...
+Successfully read in ../../data/3.dat, 2530158 packets
+processing caida dataset...
+Successfully read in ../../data/4.dat, 2518856 packets
+processing caida dataset...
+Successfully read in ../../data/5.dat, 2530680 packets
+processing caida dataset...
+Successfully read in ../../data/6.dat, 2517752 packets
+processing caida dataset...
+Successfully read in ../../data/7.dat, 2515396 packets
+processing caida dataset...
+Successfully read in ../../data/8.dat, 2501781 packets
+processing caida dataset...
+Successfully read in ../../data/9.dat, 2493844 packets
+
+Measurement by Algorithm ElasticHH Starts, memory: 16KB
+There are 109642 flows
+heavy hitters: <srcIP, count>, threshold=247
+heavy hitters: <srcIP, count>, threshold=247, number=1604
+precision_rate=0.929648
+recall_rate=0.692020
+F_score=0.793424
+ARE=1.092262
+AAE=32.869347
+There are 109534 flows
+heavy hitters: <srcIP, count>, threshold=248
+heavy hitters: <srcIP, count>, threshold=248, number=1603
+precision_rate=0.932421
+recall_rate=0.679975
+F_score=0.786436
+ARE=1.582337
+AAE=35.812660
+There are 108264 flows
+heavy hitters: <srcIP, count>, threshold=251
+heavy hitters: <srcIP, count>, threshold=251, number=1582
+precision_rate=0.928149
+recall_rate=0.694058
+F_score=0.794213
+ARE=2.157143
+AAE=33.856298
+There are 108084 flows
+heavy hitters: <srcIP, count>, threshold=253
+heavy hitters: <srcIP, count>, threshold=253, number=1559
+precision_rate=0.925043
+recall_rate=0.696600
+F_score=0.794731
+ARE=0.679425
+AAE=35.340716
+There are 107637 flows
+heavy hitters: <srcIP, count>, threshold=251
+heavy hitters: <srcIP, count>, threshold=251, number=1605
+precision_rate=0.928930
+recall_rate=0.692212
+F_score=0.793288
+ARE=0.967873
+AAE=34.218227
+There are 107435 flows
+heavy hitters: <srcIP, count>, threshold=253
+heavy hitters: <srcIP, count>, threshold=253, number=1572
+precision_rate=0.931915
+recall_rate=0.696565
+F_score=0.797233
+ARE=0.638357
+AAE=33.581277
+There are 107744 flows
+heavy hitters: <srcIP, count>, threshold=251
+heavy hitters: <srcIP, count>, threshold=251, number=1599
+precision_rate=0.943220
+recall_rate=0.696060
+F_score=0.801008
+ARE=0.386200
+AAE=33.055932
+There are 107199 flows
+heavy hitters: <srcIP, count>, threshold=251
+heavy hitters: <srcIP, count>, threshold=251, number=1595
+precision_rate=0.928082
+recall_rate=0.679624
+F_score=0.784654
+ARE=0.905965
+AAE=35.104452
+There are 107382 flows
+heavy hitters: <srcIP, count>, threshold=250
+heavy hitters: <srcIP, count>, threshold=250, number=1654
+precision_rate=0.939268
+recall_rate=0.682588
+F_score=0.790616
+ARE=1.577096
+AAE=32.505824
+There are 107244 flows
+heavy hitters: <srcIP, count>, threshold=249
+heavy hitters: <srcIP, count>, threshold=249, number=1594
+precision_rate=0.933390
+recall_rate=0.685696
+F_score=0.790597
+ARE=1.364939
+AAE=30.987190
+five average results below can be ignored if calculating CDF
+average precision rate=0.932007
+average recallrate=0.689540
+average F1 score=0.792620
+average ARE=1.135160
+average AAE=33.733192

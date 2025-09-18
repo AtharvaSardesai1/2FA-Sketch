@@ -2,6 +2,11 @@
 #define Elastic_2FA_HEAVYPART_H_
 
 #include "param.h"
+// Add this after the includes
+static inline uint32_t count_trailing_zeros(uint32_t x) {
+    if (x == 0) return 32;
+    return __builtin_ctz(x);
+}
 
 template <int bucket_num>
 class Elastic_2FA_HeavyPart
@@ -117,7 +122,7 @@ public:
 
 		if (matched != 0)
 		{
-			int matched_index = _tzcnt_u32((uint32_t)matched);
+			int matched_index = count_trailing_zeros((uint32_t)matched);
 			buckets[pos].val[matched_index] += f;
 			return 0;
 		}
@@ -144,7 +149,7 @@ public:
 
 		__m256i ct_a_comp = _mm256_cmpeq_epi32(ct_item, (__m256i)results);
 		matched = _mm256_movemask_ps((__m256)ct_a_comp);
-		int min_counter = _tzcnt_u32((uint32_t)matched);
+		int min_counter = count_trailing_zeros((uint32_t)matched);
 
 		if (min_counter_val == 0)
 		{

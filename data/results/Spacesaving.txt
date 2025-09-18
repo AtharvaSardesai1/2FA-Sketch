@@ -1,0 +1,88 @@
+processing caida dataset...
+Successfully read in ../../data/0.dat, 2472727 packets
+processing caida dataset...
+Successfully read in ../../data/1.dat, 2489780 packets
+processing caida dataset...
+Successfully read in ../../data/2.dat, 2517685 packets
+processing caida dataset...
+Successfully read in ../../data/3.dat, 2530158 packets
+processing caida dataset...
+Successfully read in ../../data/4.dat, 2518856 packets
+processing caida dataset...
+Successfully read in ../../data/5.dat, 2530680 packets
+processing caida dataset...
+Successfully read in ../../data/6.dat, 2517752 packets
+processing caida dataset...
+Successfully read in ../../data/7.dat, 2515396 packets
+processing caida dataset...
+Successfully read in ../../data/8.dat, 2501781 packets
+processing caida dataset...
+Successfully read in ../../data/9.dat, 2493844 packets
+
+Measurement by Algorithm SpaceSaving Starts, memory: 16KB
+0.dat: heavy hitters: <srcIP, count>, threshold=247
+precision_rate=0.518817
+recall_rate=0.120324
+F_score=0.195344
+ARE=465.000765
+AAE=5558.091398
+1.dat: heavy hitters: <srcIP, count>, threshold=248
+precision_rate=0.548387
+recall_rate=0.127261
+F_score=0.206582
+ARE=387.174010
+AAE=5572.771505
+2.dat: heavy hitters: <srcIP, count>, threshold=251
+precision_rate=0.513441
+recall_rate=0.120733
+F_score=0.195496
+ARE=351.487698
+AAE=5728.760753
+3.dat: heavy hitters: <srcIP, count>, threshold=253
+precision_rate=0.556452
+recall_rate=0.132777
+F_score=0.214397
+ARE=343.473347
+AAE=5562.631720
+4.dat: heavy hitters: <srcIP, count>, threshold=251
+precision_rate=0.518817
+recall_rate=0.120249
+F_score=0.195245
+ARE=429.854868
+AAE=5685.846774
+5.dat: heavy hitters: <srcIP, count>, threshold=253
+precision_rate=0.516129
+recall_rate=0.122137
+F_score=0.197531
+ARE=461.546132
+AAE=5709.814516
+6.dat: heavy hitters: <srcIP, count>, threshold=251
+precision_rate=0.502688
+recall_rate=0.116948
+F_score=0.189751
+ARE=381.573834
+AAE=5764.301075
+7.dat: heavy hitters: <srcIP, count>, threshold=251
+precision_rate=0.532258
+recall_rate=0.124138
+F_score=0.201322
+ARE=477.290970
+AAE=5611.365591
+8.dat: heavy hitters: <srcIP, count>, threshold=250
+precision_rate=0.534946
+recall_rate=0.120314
+F_score=0.196446
+ARE=435.737249
+AAE=5731.935484
+9.dat: heavy hitters: <srcIP, count>, threshold=249
+precision_rate=0.529570
+recall_rate=0.123588
+F_score=0.200407
+ARE=359.772599
+AAE=5641.258065
+five average results below can be ignored if calculating CDF
+average precision rate=0.527151
+average recallrate=0.122847
+average F1 score=0.199252
+average ARE=409.291147
+average AAE=5656.677688
