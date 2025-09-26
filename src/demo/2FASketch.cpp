@@ -76,6 +76,7 @@ int main(int argc,char* argv[])
 	double average_precision_rate=0;
 	double average_recall_rate=0;
 	double average_F_score=0;
+	double average_throughput=0;
 //	for(int i=0;i<10;++i){
 
 	printf("Measurement by Algorithm 2FASketch Starts, memory: %dKB\n", MEMORY_NUMBER);
@@ -91,9 +92,34 @@ int main(int argc,char* argv[])
 		double threshold=HEAVY_HITTER_THRESHOLD(packet_cnt);
 
 		E_2FA = new Elastic_2FASketch<TOT_BUCKET_NUM>(threshold * 0.5);
-		for(int i = 0; i < packet_cnt; ++i)
-		{
+		
+		// Insert data and measure throughput
+		struct timespec time1, time2;
+		long long resns;
+		
+		// Warm-up phase
+		for(int i = 0; i < min(10000, packet_cnt); ++i) {
 			E_2FA->insert((uint8_t*)(traces[datafileCnt-1][i].key));
+			string str((const char*)(traces[datafileCnt-1][i].key),4);
+			Real_Freq[str]++;
+		}
+
+		// Actual measurement
+		clock_gettime(CLOCK_MONOTONIC, &time1);
+		for(int i = 0; i < packet_cnt; ++i) {
+			E_2FA->insert((uint8_t*)(traces[datafileCnt-1][i].key));
+		}
+		clock_gettime(CLOCK_MONOTONIC, &time2);
+		
+		// Calculate throughput
+		resns = (long long)(time2.tv_sec - time1.tv_sec) * 1000000000LL + 
+			(time2.tv_nsec - time1.tv_nsec);
+		double throughput = (double)1000.0 * packet_cnt / resns;
+		printf("Throughput of 2FASketch (insert): %.6lf Mps\n\n", throughput);
+		average_throughput+=throughput;
+		
+		// Update Real_Freq for accuracy
+		for(int i = 0; i < packet_cnt; ++i) {
 			string str((const char*)(traces[datafileCnt-1][i].key),4);
 			Real_Freq[str]++;
 		}
@@ -206,13 +232,14 @@ int main(int argc,char* argv[])
 	average_AAE/=10;
 	average_precision_rate/=10;
 	average_recall_rate/=10;
-        average_F_score/=10;
-	printf("five average results below can be ignored if calculating CDF\n");
+    average_F_score/=10;
+	average_throughput /= (END_FILE_NO - START_FILE_NO + 1);
+		printf("five average results below can be ignored if calculating CDF\n");
          printf("average precision rate=%f\n",average_precision_rate);
          printf("average recallrate=%f\n",average_recall_rate);
          printf("average F1 score=%f\n",average_F_score);
          printf("average ARE=%f\n",average_ARE);
          printf("average AAE=%f\n",average_AAE);
-
+		 printf("average Throughput=%.6lf Mps\n", average_throughput); 
 
 }	
